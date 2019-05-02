@@ -93,3 +93,4 @@ https://www.uaeh.edu.mx/scige/boletin/tlahuelilpan/n3/e5.html
     
 http://editorial.ucentral.edu.co/ojs_uc/index.php/Ingeciencia/article/download/310/277
 
+https://networkx.github.io/documentation/networkx-2.3/tutorial.html
