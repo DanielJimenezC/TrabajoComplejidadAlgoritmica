@@ -33,9 +33,9 @@
             this.tb_01 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rb_01 = new System.Windows.Forms.RadioButton();
-            this.rb_02 = new System.Windows.Forms.RadioButton();
             this.rb_03 = new System.Windows.Forms.RadioButton();
+            this.rb_02 = new System.Windows.Forms.RadioButton();
+            this.rb_01 = new System.Windows.Forms.RadioButton();
             this.tb_03 = new System.Windows.Forms.TextBox();
             this.tb_02 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.b_recorrido = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_04 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -98,16 +99,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Algoritmo de Recorrido";
             // 
-            // rb_01
+            // rb_03
             // 
-            this.rb_01.AutoSize = true;
-            this.rb_01.Location = new System.Drawing.Point(136, 28);
-            this.rb_01.Name = "rb_01";
-            this.rb_01.Size = new System.Drawing.Size(77, 17);
-            this.rb_01.TabIndex = 3;
-            this.rb_01.TabStop = true;
-            this.rb_01.Text = "Algoritmo 1";
-            this.rb_01.UseVisualStyleBackColor = true;
+            this.rb_03.AutoSize = true;
+            this.rb_03.Location = new System.Drawing.Point(302, 28);
+            this.rb_03.Name = "rb_03";
+            this.rb_03.Size = new System.Drawing.Size(77, 17);
+            this.rb_03.TabIndex = 5;
+            this.rb_03.TabStop = true;
+            this.rb_03.Text = "Algoritmo 3";
+            this.rb_03.UseVisualStyleBackColor = true;
             // 
             // rb_02
             // 
@@ -120,16 +121,16 @@
             this.rb_02.Text = "Algoritmo 2";
             this.rb_02.UseVisualStyleBackColor = true;
             // 
-            // rb_03
+            // rb_01
             // 
-            this.rb_03.AutoSize = true;
-            this.rb_03.Location = new System.Drawing.Point(302, 28);
-            this.rb_03.Name = "rb_03";
-            this.rb_03.Size = new System.Drawing.Size(77, 17);
-            this.rb_03.TabIndex = 5;
-            this.rb_03.TabStop = true;
-            this.rb_03.Text = "Algoritmo 3";
-            this.rb_03.UseVisualStyleBackColor = true;
+            this.rb_01.AutoSize = true;
+            this.rb_01.Location = new System.Drawing.Point(136, 28);
+            this.rb_01.Name = "rb_01";
+            this.rb_01.Size = new System.Drawing.Size(77, 17);
+            this.rb_01.TabIndex = 3;
+            this.rb_01.TabStop = true;
+            this.rb_01.Text = "Algoritmo 1";
+            this.rb_01.UseVisualStyleBackColor = true;
             // 
             // tb_03
             // 
@@ -171,7 +172,7 @@
             // 
             // b_recorrido
             // 
-            this.b_recorrido.Location = new System.Drawing.Point(481, 403);
+            this.b_recorrido.Location = new System.Drawing.Point(400, 403);
             this.b_recorrido.Name = "b_recorrido";
             this.b_recorrido.Size = new System.Drawing.Size(154, 23);
             this.b_recorrido.TabIndex = 8;
@@ -198,11 +199,22 @@
             this.tb_04.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tb_04.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._KeyPress02);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(560, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Descargar Grafo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 446);
+            this.ClientSize = new System.Drawing.Size(660, 446);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tb_04);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.b_recorrido);
@@ -240,6 +252,7 @@
         private System.Windows.Forms.Button b_recorrido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_04;
+        private System.Windows.Forms.Button button1;
     }
 }
 

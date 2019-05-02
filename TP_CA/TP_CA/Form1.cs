@@ -14,6 +14,8 @@ namespace TP_CA
 {
     public partial class Form1 : Form
     {
+        public Bitmap picture;
+
         public List<List<int>> Grafo;
 
         public static List<List<int>> GeneraG(int n)
@@ -193,7 +195,7 @@ namespace TP_CA
 
                     GenerarJPG(b.ToString());
 
-                    Process.Start("graph.jpg");
+                    //Process.Start("graph.jpg");
 
                     GrafoText = string.Format(texto, Environment.NewLine);
                     tb_02.Text = GrafoText;
@@ -250,5 +252,11 @@ namespace TP_CA
                 e.Handled = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("graph.jpg");
+        }
+
     }
 }
