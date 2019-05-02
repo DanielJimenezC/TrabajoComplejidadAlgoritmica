@@ -1,0 +1,10 @@
+D:\TP\TP_CA\TP_CA\bin\Debug\TP_CA.exe.config
+D:\TP\TP_CA\TP_CA\bin\Debug\TP_CA.exe
+D:\TP\TP_CA\TP_CA\bin\Debug\TP_CA.pdb
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.csprojAssemblyReference.cache
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.Form1.resources
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.Properties.Resources.resources
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.csproj.GenerateResource.cache
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.csproj.CoreCompileInputs.cache
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.exe
+D:\TP\TP_CA\TP_CA\obj\Debug\TP_CA.pdb
