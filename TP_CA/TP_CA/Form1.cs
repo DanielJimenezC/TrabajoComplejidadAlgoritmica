@@ -67,6 +67,34 @@ namespace TP_CA
             }
         }
 
+        public List<List<int>> resultString = new List<List<int>>();
+
+        public void BackTracking(List<List<int>> G,  int v, List<bool> visited, int vp, List<int> orden)
+        {
+            List<int> opciones = new List<int>();
+            visited[v] = true;
+            orden.Add(v);
+            var auxVisited = visited;
+            var auxOrden = orden;
+            foreach( var u in G[v])
+            {
+                if(visited[u] == false)
+                {
+                    opciones.Add(u);
+                }
+            }
+            foreach(var u in opciones)
+            {
+                BackTracking(G, u, visited, vp, orden);
+                visited = auxVisited;
+                orden = auxOrden;
+            }
+            if( visited.Where(x=>x == true).Count() == G.Count() && opciones.Count() == 0 && G[v].Contains(vp))
+            {
+                resultString.Add(orden);
+            }
+        }
+
         public static string FoundWay(List<List<int>> G, int s)
         {
             int n = G.Count();
@@ -146,6 +174,25 @@ namespace TP_CA
             }
         }
 
+       /* private static List<int> BFS(List<List<int>> tree, List<int> level)
+        {
+            List<int> bfs_list = new List<int>();
+            
+            if (level.Count() > 0)
+            {
+                bfs_list.AddRange(level);
+                List<int> sub_level = new List<int>();
+
+                foreach(var v in level)
+                {
+                    if (!tree.Contains(v))
+                    {
+                        continue;
+                    }
+                }
+            }
+        }*/
+
         public Form1()
         {
             InitializeComponent();
@@ -208,6 +255,36 @@ namespace TP_CA
                     }
                     else if (rb_02.Checked)
                     {
+                        List<bool> visited = new List<bool>();
+                        Llenar(ref visited, n);
+                        List<int> orden = new List<int>();
+
+                        BackTracking(Grafo,_ini_,visited,_ini_,orden);
+
+                        List<string> lista = new List<string>();
+                        string mensaje = string.Empty;
+                        int i = 0;
+
+                        foreach (var j in resultString)
+                        {
+                            mensaje += "opcion " + i + " : ";
+                            foreach(var z in j)
+                            {
+                                if (z != j.Last())
+                                {
+                                    mensaje += z + " -> ";
+                                }
+                                else
+                                {
+                                    mensaje += z;
+                                }
+                            }
+                            mensaje += "\t";
+                            i++;
+                        }
+
+                        tb_03.Text = mensaje;
+
                         MessageBox.Show("algo 02", "Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else if (rb_03.Checked)
