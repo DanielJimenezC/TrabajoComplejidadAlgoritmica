@@ -78,8 +78,8 @@ DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'TFMapa',
-        'USER': '',
-        'PASSWORD': 'asd',
+        'USER': 'postgres',
+        'PASSWORD': 'P@ssw0rd123',
         'HOST': 'localhost',
         'PORT': '5432',
     }
