@@ -15,22 +15,26 @@ def getUrlMaps(path):
     for r, d, f in os.walk(path):
         for file in f:
             if '.html' in file:
-                data = (file.split('-')[1]).split('.')[0]
-                files.append("Map?idMap="+data)
-    for f in files:
-        print(f)
+                data = (file[3:]).split('.')[0]
+                files.append(data)
     return files
 
-
-
 def Dashboard(request):
-    path = "D:\\CURSO-COMPLEJIDAD-ALGORITMICA\\Python-Demo-Trabajo-Final\\AdminProject\\WebView\\AlgorithmsMaps"
+    
+    path =  'D:\Gi-Repository\Git-Proyecto-Complejidad\TrabajoComplejidadAlgoritmica\Demo-Algoritmo\AdminProject\WebView\AlgorithmsMaps'
+
     files = getUrlMaps(path)
+
     #departamentos = Poblacion.objects.all().values_list('Departamento', flat=True).distinct()
     return render(request, 'Dashboard.html', {'files':files})
 
 def  Map(request):
-    return render(request, 'Map.html')
+    
+    idMap = str(request.GET['id'])
+
+    path = 'AlgorithmsMaps/map'+idMap+'.html'    
+
+    return render(request, 'Map.html',{'path':path})
 
 
 # Algoritmo para calcular distancia entre 2 puntos geograficos
@@ -84,6 +88,17 @@ def CreateMap(latCentro, lonCentro ,order, tipoDeBusqueda):
 
     nameOfPage = 'map'+ str(uuid.uuid4()) + '.html'
 
-    my_map.save('./'+nameOfPage)
+    pathComplete = 'D:/Gi-Repository/Git-Proyecto-Complejidad/TrabajoComplejidadAlgoritmica/Demo-Algoritmo/AdminProject/WebView/AlgorithmsMaps/' + nameOfPage
+
+    my_map.save( pathComplete )
+
+    # Procedimiento para eliminar el bootstrap 3.2.0 debido a que se esta usando bootstrap 4
+    with open(pathComplete, "r+") as f:
+        d = f.readlines()
+        f.seek(0)
+        for i in d:
+            if 'bootstrap/3.2.0/css' not in i:
+                f.write(i)
+        f.truncate()
 
         

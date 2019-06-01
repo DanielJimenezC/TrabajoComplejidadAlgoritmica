@@ -12,7 +12,7 @@
             <div class="card-body">
                 <ul>
                 {% for file in files %}
-                    <li><a href="{{ file }}">{{ file }}</a></li>
+                    <li><a href="Map?id={{ file }}">map-{{ file }}.html</a></li>
                 {% endfor %}
                 </ul>
             </div>
