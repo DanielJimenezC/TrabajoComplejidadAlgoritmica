@@ -76,3 +76,13 @@ def CreateMap(latCentro, lonCentro ,order, tipoDeBusqueda):
             if 'bootstrap/3.2.0/css' not in i:
                 f.write(i)
         f.truncate()
+
+
+# Funcion de filtro
+def filtroArray(array, filtro):
+    i = 0
+    for data in array:
+        if data == filtro:
+            return i
+        i += 1
+    return None
