@@ -32,35 +32,64 @@ Resolver el problema del agente viajero(TSP) ya que es uno de los más estudiado
 
 Para la implementación del trabajo hemos utilizado el lenguaje de programación con los siguientes algoritmos:
 
-### 1. BFS
+### 1. UDFS
 
-•	En este caso, primero se expande el nodo raíz y luego todos los nodos generados por éste, luego sus sucesores y así sucesivamente. 
+•	 
 
-•	Todos los nodos que están a profundidad d se expanden antes que los nodos con profundidad d + 1.
-
-
-### 2. DFS
-
-•	En esta búsqueda siempre se expande uno de los nodos que se encuentre en lo más profundo del árbol. 
-
-•	Sólo si la búsqueda conduce a un callejón sin salida (un nodo que no es meta y que no tiene expansión), se revierte la búsqueda y se expanden los nodos de niveles menos profundos.
+•	
 
 
-# Análisis de Complejidad
+### 2. PRIM
 
-### Algoritmo 01
+•	 El algoritmo incrementa continuamente el tamaño de un árbol, comenzando por un vértice inicial al que se le van agregando sucesivamente vértices cuya distancia a los anteriores es mínima. Esto significa que en cada paso, las aristas a considerar son aquellas que inciden en vértices que ya pertenecen al árbol.
+
+### 3. BELLMAN-FORD
+
+•	Un algoritmo que busca el camino más corto de un nodo a otro. 
+
+•	Recibe como dato de entrada un Grafo y el nodo de salida. El algoritmo buscará el camino más corto desde el nodo de partida y empezará a buscar el camino más camino corto comparando el costo de cada uno.
+
+## Análisis de Complejidad
+
+### Algoritmo 01 (UDFS)
 
 O(n!)
 
 
-### Algoritmo 02
+### Algoritmo 02 (BELLMANFORD)
 
 O(n^3)
 
 
-### Algoritmo 03
+### Algoritmo 03 (PRIM)
 
-O(2^n)
+O(n^2)
+
+# Diseño de experimentos
+
+
+
+# Desarrollo de experimentos
+
+
+
+# Analisis e interpretacion de datos
+
+## Resultados de la prueba
+
+### Algoritmo 01 (UDFS)
+
+Al tener una complejidad de n!, con 
+
+
+### Algoritmo 02 (BELLMANFORD)
+
+
+
+
+### Algoritmo 03 (PRIM)
+
+O(n^2)
 
 # Conclusiones
 
