@@ -23,7 +23,7 @@ Resolver el problema del agente viajero(TSP) ya que es uno de los más estudiado
 
 ●	Implementar un algoritmo el cual resuelva de manera eficiente el problema de las conexiones de los centros poblados en el país.
 
-●	Analizar la conveniencia de usar las técnicas de “DFS”, “BFS”, “fuerza bruta” y “backtracking”
+●	Analizar la conveniencia de usar las técnicas de "UDFS", "MST", "BellmanFord", "Jhonson", "Floyd-Warshall"
 
 ●	Analizar la complejidad del algoritmo que se implementará.
 
@@ -50,33 +50,17 @@ Para la implementación del trabajo hemos utilizado el lenguaje de programación
 
 ### Algoritmo 01
 
-f(n) = 15+log2 n(10+(n+2)*11)
-
-Termino dominante:
-Log2 n
-
-O(Log2 n)
+O(n!)
 
 
 ### Algoritmo 02
 
-f(n) = 7+n+2(4)+2^n+2
-
-Termino dominante: 
-2^n
-
-O(2^n)
+O(n^3)
 
 
 ### Algoritmo 03
 
-f(n) = 10+2+n(2)+2+n(3+2^n)+5
-
-Termino dominante: 
-n*2^n
-
 O(2^n)
-
 
 # Conclusiones
 
