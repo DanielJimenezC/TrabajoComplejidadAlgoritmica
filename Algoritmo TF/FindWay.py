@@ -32,24 +32,16 @@ def FoundWay(G,s):
     find, path, cost = bellmanford(G, s)
     m = cost[0]
     destino = s
-    for i in range(1,n):
-        if m < cost[i]:
-            m = cost[i]
-            destino = i
+    Road = []
+
     if find:
-        Road = Way(path, destino)
-    return Road
+        for i in range(1,n):
+            if m < cost[i]:
+                m = cost[i]
+                destino = i
 
-
-    
-
-G = []
-with open('grafito-prim.in') as f:
-    for line in f:
-        u = len(G)
-        G.append([])
-        nums = [int(x) for x in line.split(' ')]
-        for i in range(len(nums) // 2):
-            G[u].append((nums[i*2], nums[i*2+1]))
-
-print(bellmannford(G,2))
+        if find:
+            Road = Way(path, destino)
+            return Road
+    else:
+        return Road
