@@ -8,5 +8,3 @@ class Poblacion(models.Model):
     Ciudad = models.TextField()
     Latitud = models.FloatField(null=True,blank=True, default=None)
     Longitud = models.FloatField(null=True,blank=True, default=None)
-
-    
