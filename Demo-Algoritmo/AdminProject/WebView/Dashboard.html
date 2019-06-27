@@ -1,0 +1,28 @@
+{% extends 'Shared/base.html' %}
+{% load static %}
+{% block header %}
+<link href="{% static 'libs/bootstrap-select/bootstrap-select.min.css' %}" rel="stylesheet" type="text/css" />
+{% endblock  %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <ul>
+                {% for file in files %}
+                    <li><a href="Map?id={{ file }}">map-{{ file }}.html</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
+
+{% block scripts %}
+ <script src="{% static 'libs/bootstrap-select/bootstrap-select.min.js' %}"></script>
+{% endblock  %}

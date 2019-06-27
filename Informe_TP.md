@@ -23,7 +23,7 @@ Resolver el problema del agente viajero(TSP) ya que es uno de los más estudiado
 
 ●	Implementar un algoritmo el cual resuelva de manera eficiente el problema de las conexiones de los centros poblados en el país.
 
-●	Analizar la conveniencia de usar las técnicas de “DFS”, “BFS”, “fuerza bruta” y “backtracking”
+●	Analizar la conveniencia de usar las técnicas de "UDFS", "MST", "BellmanFord", "Jhonson", "Floyd-Warshall"
 
 ●	Analizar la complejidad del algoritmo que se implementará.
 
@@ -32,51 +32,64 @@ Resolver el problema del agente viajero(TSP) ya que es uno de los más estudiado
 
 Para la implementación del trabajo hemos utilizado el lenguaje de programación con los siguientes algoritmos:
 
-### 1. BFS
+### 1. UDFS
 
-•	En este caso, primero se expande el nodo raíz y luego todos los nodos generados por éste, luego sus sucesores y así sucesivamente. 
+•	 
 
-•	Todos los nodos que están a profundidad d se expanden antes que los nodos con profundidad d + 1.
-
-
-### 2. DFS
-
-•	En esta búsqueda siempre se expande uno de los nodos que se encuentre en lo más profundo del árbol. 
-
-•	Sólo si la búsqueda conduce a un callejón sin salida (un nodo que no es meta y que no tiene expansión), se revierte la búsqueda y se expanden los nodos de niveles menos profundos.
+•	
 
 
-# Análisis de Complejidad
+### 2. PRIM
 
-### Algoritmo 01
+•	 El algoritmo incrementa continuamente el tamaño de un árbol, comenzando por un vértice inicial al que se le van agregando sucesivamente vértices cuya distancia a los anteriores es mínima. Esto significa que en cada paso, las aristas a considerar son aquellas que inciden en vértices que ya pertenecen al árbol.
 
-f(n) = 15+log2 n(10+(n+2)*11)
+### 3. BELLMAN-FORD
 
-Termino dominante:
-Log2 n
+•	Un algoritmo que busca el camino más corto de un nodo a otro. 
 
-O(Log2 n)
+•	Recibe como dato de entrada un Grafo y el nodo de salida. El algoritmo buscará el camino más corto desde el nodo de partida y empezará a buscar el camino más camino corto comparando el costo de cada uno.
 
+## Análisis de Complejidad
 
-### Algoritmo 02
+### Algoritmo 01 (UDFS)
 
-f(n) = 7+n+2(4)+2^n+2
-
-Termino dominante: 
-2^n
-
-O(2^n)
+O(n!)
 
 
-### Algoritmo 03
+### Algoritmo 02 (BELLMANFORD)
 
-f(n) = 10+2+n(2)+2+n(3+2^n)+5
+O(n^3)
 
-Termino dominante: 
-n*2^n
 
-O(2^n)
+### Algoritmo 03 (PRIM)
 
+O(n^2)
+
+# Diseño de experimentos
+
+
+
+# Desarrollo de experimentos
+
+
+
+# Analisis e interpretacion de datos
+
+## Resultados de la prueba
+
+### Algoritmo 01 (UDFS)
+
+Al tener una complejidad de n!, con 
+
+
+### Algoritmo 02 (BELLMANFORD)
+
+
+
+
+### Algoritmo 03 (PRIM)
+
+O(n^2)
 
 # Conclusiones
 
